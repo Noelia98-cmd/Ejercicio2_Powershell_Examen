@@ -39,6 +39,16 @@ Add-LocalGroupMember -Group "Administradores" -Member "Informatico"
 $passNU = ConvertTo-SecureString "nuevo_usuario" -AsPlainText -Force
 New-LocalUser -Name "nuevo_usuario" -Password $passNU
 
+Add-LocalGroupMember -Group "Usuarios" -Member "Trabajador1"
+Add-LocalGroupMember -Group "Usuarios" -Member "Trabajador2"
+Add-LocalGroupMember -Group "Usuarios" -Member "Trabajador3"
+Add-LocalGroupMember -Group "Usuarios" -Member "Trabajador4"
+Add-LocalGroupMember -Group "Usuarios" -Member "Trabajador5"
+Add-LocalGroupMember -Group "Usuarios" -Member "Responsable1"
+Add-LocalGroupMember -Group "Usuarios" -Member "Responsable2"
+Add-LocalGroupMember -Group "Usuarios" -Member "Informatico"
+Add-LocalGroupMember -Group "Usuarios" -Member "nuevo_usuario"
+
 Get-LocalGroupMember -Group "Trabajadores"
 
 Get-LocalGroupMember -Group "Responsables"
@@ -46,5 +56,8 @@ Get-LocalGroupMember -Group "Responsables"
 Get-LocalUser -Name "Trabajador1" | Format-List *
 
 Get-LocalUser -Name "Responsable1" | Format-List *
+
+
+
 
 
