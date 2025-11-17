@@ -36,7 +36,15 @@ New-LocalUser -Name "Informatico" -Password $passInf
 Set-LocalUser -Name "Informatico" -PasswordNeverExpires $true
 Add-LocalGroupMember -Group "Administradores" -Member "Informatico"
 
-
 $passNU = ConvertTo-SecureString "nuevo_usuario" -AsPlainText -Force
 New-LocalUser -Name "nuevo_usuario" -Password $passNU
+
+Get-LocalGroupMember -Group "Trabajadores"
+
+Get-LocalGroupMember -Group "Responsables"
+
+Get-LocalUser -Name "Trabajador1" | Format-List *
+
+Get-LocalUser -Name "Responsable1" | Format-List *
+
 
