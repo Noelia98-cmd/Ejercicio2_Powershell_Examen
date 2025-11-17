@@ -1,0 +1,5 @@
+sudo touch /home/alum1/{listado.txt,prueba.txt}
+sudo touch /home/alum2/docum.txt
+sudo touch /home/usuadm/notas.txt
+sudo mkdir -p /home/usuadm/compartir
+sudo touch /home/usuadm/compartir/ejercicios.txt
